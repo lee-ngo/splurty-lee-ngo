@@ -39,18 +39,18 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
         </div>
-        <div class="modal-body">
-          <%= simple_form_for Quote.new do |f| %>
+        <%= simple_form_for Quote.new do |f| %>
+          <div class="modal-body">
             <div class="modal-body">
               <%= f.input :saying %>
               <%= f.input :author %>
-            </div>  
-          <% end %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit 'Add Quote', :class => 'btn btn-danger' %>
-        </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Add Quote', :class => 'btn btn-danger' %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
